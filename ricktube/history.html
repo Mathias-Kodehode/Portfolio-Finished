@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History - RickTube</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">RickTube - Never Gives You Up</div>
+      <div class="header-icons">
+        <a href="index.html">
+          <button>Back</button>
+        </a>
+      </div>
+    </header>
+    <div class="content">
+      <h1>Your Watch History</h1>
+      <p>
+        View your watch history here. You can remove videos from your history if
+        you wish.
+      </p>
+
+      <div class="history-list">
+        <div class="video-item">
+          <a
+            href="https://www.youtube.com/watch?v=wpV-gGA4PSk&pp=ygUbbmV2ZXIgZ29ubmEgaGl0IHRob3NlIG5vdGVz"
+            target=""
+          >
+            <div
+              class="thumbnail"
+              style="background-image: url('./images/rick.jpg')"
+            ></div>
+            <div class="video-info">
+              <h3>Rick Roll - Classic</h3>
+              <p>Channel: Rick Astley • 100M views • 5 years ago</p>
+            </div>
+          </a>
+          <button class="remove-button">Remove</button>
+        </div>
+
+        <div class="video-item">
+          <a
+            href="https://www.youtube.com/watch?v=wpV-gGA4PSk&pp=ygUbbmV2ZXIgZ29ubmEgaGl0IHRob3NlIG5vdGVz"
+            target=""
+          >
+            <div
+              class="thumbnail"
+              style="background-image: url('./images/rick.jpg')"
+            ></div>
+            <div class="video-info">
+              <h3>Never Gonna Give You Up</h3>
+              <p>Channel: Rick Astley • 150M views • 4 years ago</p>
+            </div>
+          </a>
+          <button class="remove-button">Remove</button>
+        </div>
+      </div>
+
+      <div class="empty-history" style="display: none">
+        <p>Your watch history is empty.</p>
+      </div>
+    </div>
+
+    <script>
+      const removeButtons = document.querySelectorAll(".remove-button");
+      removeButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const videoItem = this.parentElement;
+          videoItem.remove();
+          if (document.querySelector(".history-list").children.length === 0) {
+            document.querySelector(".empty-history").style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

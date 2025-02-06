@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background-size: cover;
+  overflow: hidden;
+  background-color: black;
+  height: 100vh;
+  background-image: url(../Image/space.gif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-image: linear-gradient(black, rgba(255, 255, 255, 0));
+  top: 0;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+}
+
+footer {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), black);
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 10px 10px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.planet-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.planet-wrapper {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 350%;
+  height: 100%;
+  display: flex;
+}
+
+.planet {
+  flex: 1;
+  background: url("../Image/Earth_Low_End.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.iss-marker {
+  position: absolute;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.iss-marker::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#iss-location-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}

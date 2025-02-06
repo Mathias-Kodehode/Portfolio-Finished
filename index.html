@@ -5,56 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mathias Bronnes</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="script.js"></script>
   </head>
   <body>
     <header>
-      <h1>Mathias Bronnes</h1>
-      <nav>
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('skills')">Skills</button>
-        <button onclick="showSection('contact')">Contact</button>
+      <nav class="navbar">
+        <button onclick="showSection('about')">Om Meg</button>
+        <button onclick="showSection('projects')">Mine Prosjekter</button>
       </nav>
+
+      <button id="mode-toggle">Dark Mode</button>
     </header>
 
     <main>
       <div id="about" class="content-section">
-        <img src="./images/profilbilde.jpg" alt="" />
-        <div class="about-text">
-          Mitt navn er Mathias Bronnes, og jeg er en allsidig person med
-          lidenskap for både musikk og matlaging. Jeg har alltid hatt en stor
-          interesse for teknologi, spesielt innen datamaskiner og programmering,
-          og jeg er ivrig etter å lære mer om koding i en profesjonell
-          arbeidsplass. Jeg tror at min nysgjerrighet og min evne til å lære
-          raskt vil være verdifulle egenskaper i et arbeidsteam. Gjennom min
-          erfaring som musiker har jeg utviklet sterke ferdigheter innen
-          kreativitet, tålmodighet og disiplin – egenskaper som også er viktige
-          i programmering og teknologi. Som kokk har jeg lært verdien av
-          organisasjon, teamwork og evnen til å tilpasse meg forskjellige
-          situasjoner, ferdigheter jeg mener kan overføres til teknologi- og
-          programmeringsfeltet. Jeg er nå på jakt etter en mulighet der jeg kan
-          kombinere mine teknologiske interesser med min vilje til å utvikle
-          ferdigheter innen koding. Jeg ser frem til å bidra til et team, lære
-          fra erfarne fagfolk, og utvikle meg både personlig og profesjonelt.
+        <div class="profile-column">
+          <div class="profile-container">
+            <img src="./images/profilbilde.jpg" alt="Profile Picture" />
+            <h1 style="font-size: 50px">Mathias Bronnes</h1>
+          </div>
+          <div class="skills-section">
+            <h2>Mine ferdigheter</h2>
+            <div class="skills-images">
+              <img src="./images/html.png" alt="HTML" />
+              <img src="./images/css.png" alt="CSS" />
+              <img src="./images/javascript.png" alt="JavaScript" />
+              <img class="skill-react" src="./images/react.png" alt="React" />
+              <img
+                class="skill-github"
+                src="./images/github.png"
+                alt="GitHub"
+              />
+              <img src="./images/figma.png" alt="Figma" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about-box">
+          <h1>Om Meg:</h1>
+          <p>
+            Jeg er en utdannet kokk med lidenskap for matlaging og kvalitet i
+            alle ledd. På fritiden driver jeg aktivt med musikk, både som utøver
+            og produsent. I tillegg har jeg stor interesse for data,
+            mediateknikk og musikkproduksjon.
+          </p>
+          <h1>Min Erfaring:</h1>
+          <p>
+            Jeg har også deltatt i Kodehode-kurset, hvor jeg har lært om
+            programmering og utviklet mine tekniske ferdigheter. Jeg er en
+            nysgjerrig og lærevillig person som liker å utvikle meg og tilegne
+            meg ny kunnskap, og jeg trives med å jobbe både kreativt og
+            strukturert.
+          </p>
+          <div class="contact-section">
+            <h2>Kontakt Meg!</h2>
+            <div class="contact-buttons">
+              <a href="https://github.com/Mathias-Kodehode">
+                <button class="contactInfo">GitHub</button>
+              </a>
+              <a href="./CV/CV-1.pdf" download="CV-1">
+                <button class="contactInfo">Last Ned CV</button>
+              </a>
+              <button class="contactInfo">+47 976 88 932</button>
+              <a href="mailto:mathias.k.bronnes@gmail.com">
+                <button class="contactInfo">mathias.k.bronnes@gmail.com</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="skills" class="content-section" style="display: none">
-        <h2>Skills & Qualifications</h2>
-        <div></div>
-      </div>
-
-      <div id="contact" class="content-section" style="display: none">
-        <h2 style="font-size: 3em">Contact Info</h2>
-        <div class="contact-buttons">
-          <button class="contactInfo">Email</button>
-          <button class="contactInfo">GitHub</button>
-          <button class="contactInfo">CV</button>
-          <button class="contactInfo">+4797688932</button>
+      <div id="projects" class="content-section" style="display: none">
+        <div class="projects-container">
+          <a href="api oppgave/index.html">
+            <div class="project-card">
+              <img
+                src="./images/apioppgave.png"
+                alt="Prosjekt 1"
+                class="project-img"
+              />
+              <div class="project-info">
+                <h3>API Gruppeoppgave</h3>
+                <p>
+                  På denne nettsiden kan du spore den internasjonale
+                  romstasjonens eksakte koordinater.
+                </p>
+                <p>komplett med 3d modeller og animasjoner</p>
+              </div>
+            </div>
+          </a>
+          <a href="ricktube/index.html">
+            <div class="project-card">
+              <img
+                src="./images/ricktube.png"
+                alt="Prosjekt 2"
+                class="project-img"
+              />
+              <div class="project-info">
+                <h3>"Rick"Tube</h3>
+                <p>
+                  Dette er en parodi av youtube, og ett par andre som er lagt
+                  inn som easter eggs. Den inneholder omtrent 100%
+                  funksjonalitet.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="mazegame/game.html">
+            <div class="project-card">
+              <img
+                src="./images/maze game.png"
+                alt="Prosjekt 1"
+                class="project-img"
+              />
+              <div class="project-info">
+                <h3>Julespill</h3>
+                <p>
+                  Dette er ett labyrintspill som blir vanskeligere for hver
+                  runde.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </main>
 
-    <footer></footer>
+    <footer>&copy; 2025 Mathias Bronnes. All rights reserved.</footer>
   </body>
 </html>
