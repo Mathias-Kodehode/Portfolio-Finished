@@ -4,9 +4,7 @@ function showSection(sectionId) {
   sections.forEach((section) => {
     if (section.style.display !== "none") {
       section.classList.add("page-exit");
-      setTimeout(() => {
-        section.style.display = "none";
-      }, 1000);
+      section.style.display = "none";
     }
   });
 
