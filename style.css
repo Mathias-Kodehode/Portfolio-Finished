@@ -224,6 +224,7 @@ header nav button:hover,
   width: 800px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .project-card:hover {
@@ -243,7 +244,7 @@ header nav button:hover,
 
 .project-info {
   padding: 1rem;
-  transition: color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .project-info h3 {
@@ -299,7 +300,8 @@ footer {
   transition: background-color 0.5s ease-in-out;
 }
 
-h1, h2 {
+h1,
+h2 {
   transition: color 0.5s ease-in-out;
 }
 
@@ -330,7 +332,7 @@ h1, h2 {
 
 .content-section {
   animation: pageFadeIn 1s forwards;
-  transition: transform 0.5s ease-in-out
+  transition: transform 0.5s ease-in-out;
 }
 
 @keyframes pageFadeIn {
